@@ -15,9 +15,15 @@ function bible_details(){
                 console.log(translation);
                 var reference = data.reference;
                 row.innerHTML+=`<div class="row">
-                <label class="heading">${"BIBLE"}</label>
-                <label class="head">${translation}</label><br>
-                <label class="head">${reference}</label><br>
+                <div class="heating-container">
+                    <div class="heating-title">
+                        <label class="heading">${"BIBLE"}</label>
+                    </div>
+                    <div class="title">
+                        <label class="head">${translation}</label>
+                        <label class="head">${reference}</label>
+                    </div>
+                </div>
                 </div>`;
                 document.body.append(create_container);
                 var verse = data.verses;
@@ -28,10 +34,10 @@ function bible_details(){
                     var text = verse[i].text; 
                     // console.log(varses);
                     row.innerHTML += ` <div class="col-lg-4, col-sm-12" id="card">
-                    <label for="book_name" class="details">Book Name : ${book_name}</label><br>
-                    <label for="chapter" class="details">Chapter : ${chapter}</label><br>
-                    <label for="verses_no" class="details">Verses No : ${verses_no}</label><br>
-                    <label for="verses" class="details">Verses : ${text}</label><br>
+                    <label for="book_name" class="details">Book Name : ${book_name}</label>
+                    <label for="chapter" class="details">Chapter : ${chapter}</label>
+                    <label for="verses_no" class="details">Verses No : ${verses_no}</label>
+                    <label for="verses" class="details">Verses : ${text}</label>
                     </div>`;
                     document.body.append(create_container);
                 }
